@@ -21,7 +21,7 @@ class ArticleController extends Controller
 
   function store()
   {
-   
+  
     $article = new Article();
     $article->title = request('title');
     $article->write = request('write');

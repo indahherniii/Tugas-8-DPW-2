@@ -19,19 +19,19 @@
                             </thead>
                             <tbody>
                                 @foreach ($list_coment as $comment)
-                                <tr>
-                                  <td>{{ $loop->iteration }}</td>
-                                  <td>
-                                      <div class="btn-group">
-                                        <a href="{{ url('admin/coment', $comment->id) }}" class="btn btn-dark">
-                                          <i class="fa fa-comment"></i>
-                                      </a>
-                                      </div>
-                                  </td>
-                                  <td>{{ $comment->nama  }}</td>
-                                  <td>{{ $comment->created_at->diffForHumans()  }}</td>
-                                  <td>{{ $comment->isi }}</td>
-                              </tr>
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="{{ url('admin/coment', $comment->id) }}" class="btn btn-dark">
+                                                    <i class="fa fa-comment"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>{{ $comment->nama }}</td>
+                                        <td>{{ $comment->created_at->diffForHumans() }}</td>
+                                        <td>{{ $comment->isi }}</td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>

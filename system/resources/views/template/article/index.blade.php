@@ -14,7 +14,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="" class="control-label">Nama Article</label>
-                                <input type="text" class="form-control" name="title" value="{{ $title ?? "" }}">
+                                <input type="text" class="form-control" name="title" value="{{ $title ?? '' }}">
                             </div>
                             <button class="btn btn-warning float-right"><i class="fa fa-search"></i> Search</button>
                         </form>
@@ -48,10 +48,12 @@
                                                 <a href="{{ url('admin/article', $article->id) }}" class="btn btn-dark">
                                                     <i class="fa fa-info"></i>
                                                 </a>
-                                                <a href="{{ url('admin/article', $article->id) }}/edit" class="btn btn-warning">
+                                                <a href="{{ url('admin/article', $article->id) }}/edit"
+                                                    class="btn btn-warning">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                               @include('template.admin.utils.delete',['url' => url('admin/article', $article->id)]) 
+                                                @include('template.admin.utils.delete',['url' => url('admin/article',
+                                                $article->id)])
                                             </div>
                                         </td>
                                         <td>{{ $article->title }}</td>
